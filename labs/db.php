@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost"; // Or FreeHosting's database host
+$servername = "panel.freehosting.com"; 
 $username = "chrjymme_dbContacts";
 $password = "kZkw8da3VSU9Y2XUJDF9";
 $dbname = "chrjymme_dbContacts";
