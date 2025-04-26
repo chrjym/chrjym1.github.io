@@ -1,9 +1,10 @@
 <?php
 // Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "dbContacts";
+$servername = "192.168.0.100";
+$username = "chrjymme_dbContacts";
+$password = "kZkw8da3VSU9Y2XUJDF9";
+$dbname = "chrjymme_dbContacts";
+
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
