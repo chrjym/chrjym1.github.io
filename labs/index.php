@@ -1,5 +1,9 @@
 <?php
-include 'db.php'; // Include database connection
+include 'includes/db.php'; // Securely include database connection
+
+// Enable error reporting for debugging
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 // Handle form submissions
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -8,12 +12,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = $_POST['name'];
         $cpno = $_POST['cpno'];
 
-        // Use prepared statements for security
         $stmt = $conn->prepare("INSERT INTO tblSMS (studno, name, cpno) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $studno, $name, $cpno);
         $stmt->execute();
         $stmt->close();
-        echo "Record added successfully<br>";
+        echo "Record added successfully!<br>";
     }
 
     if (isset($_POST['update'])) {
@@ -26,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("sssi", $studno, $name, $cpno, $sms_ID);
         $stmt->execute();
         $stmt->close();
-        echo "Record updated successfully<br>";
+        echo "Record updated successfully!<br>";
     }
 
     if (isset($_POST['delete'])) {
@@ -36,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("i", $sms_ID);
         $stmt->execute();
         $stmt->close();
-        echo "Record deleted successfully<br>";
+        echo "Record deleted successfully!<br>";
     }
 }
 
