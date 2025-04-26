@@ -1,7 +1,7 @@
 <?php
 $servername = "panel.freehosting.com"; 
 $username = "chrjymme_dbContacts";
-$password = "kZkw8da3VSU9Y2XUJDF9";
+$password = "Blackpinklalisam@1";
 $dbname = "chrjymme_dbContacts";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
