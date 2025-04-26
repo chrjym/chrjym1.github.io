@@ -1,5 +1,5 @@
 <?php
-include 'includes/db.php'; // Securely include database connection
+include 'db.php'; // Securely include database connection
 
 // Enable error reporting for debugging
 error_reporting(E_ALL);
