@@ -1,0 +1,233 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #0a0a0e;
+  color: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  min-height: 100vh;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 32px;
+  background: #0a0a0e;
+  border-bottom: 1px solid #232336;
+}
+.nav-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  color: #c2c2cf;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.16s;
+}
+.nav-links a.active,
+.nav-links a:hover {
+  color: #fff;
+  border: 2px solid #fff;
+  background: transparent;
+}
+.hero-section {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  padding-left: 6vw;
+}
+.hero-content {
+  max-width: 550px;
+}
+.hero-content h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.hero-content p {
+  color: #b8b8d1;
+  font-size: 18px;
+  margin-bottom: 32px;
+}
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-primary {
+  background: #910dfc;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #7a10d0;
+}
+.arrow {
+  margin-left: 10px;
+}
+.btn-secondary {
+  background: #f5e7ff;
+  color: #9a51e5;
+  border: 2px solid #e0d1f7;
+}
+.btn-secondary:hover {
+  background: #ece6fc;
+}
+.projects-section {
+  padding: 60px 6vw;
+}
+.projects-section h2 {
+  font-size: 1.7em;
+  margin-bottom: 0.2em;
+}
+.projects-desc {
+  color: #b8b8d1;
+  margin-bottom: 36px;
+  font-size: 1.1em;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 30px;
+}
+.project-card {
+  background: rgba(25, 19, 31, 0.6);
+  border: 1.5px solid #910dfc22;
+  border-radius: 16px;
+  padding: 28px 26px 22px 26px;
+  min-width: 340px;
+  max-width: 420px;
+  color: #fff;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 16px #910dfc11;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  transition: transform 220ms cubic-bezier(.2,.9,.3,1), box-shadow 220ms ease, border-color 220ms ease;
+}
+
+/* Hover / focus effect for project cards */
+.project-card:hover,
+.project-card:focus-within {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(145,13,252,0.18);
+  border-color: #910dfc55;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .project-card {
+    transition: none;
+    transform: none !important;
+  }
+}
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.project-title {
+  font-size: 1.18em;
+  font-weight: 700;
+}
+.external-link {
+  text-decoration: none;
+  opacity: 0.55;
+  transition: opacity 0.15s;
+}
+.external-link:hover {
+  opacity: 1;
+}
+.project-year {
+  color: #b8b8d1;
+  font-size: 1em;
+  margin-bottom: 2px;
+}
+.project-desc {
+  color: #ddd;
+  font-size: 1.07em;
+}
+.project-tags {
+  margin-top: 13px;
+  display: flex;
+  gap: 9px;
+}
+@media (max-width: 1000px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.tag {
+  background: #2d133f;
+  color: #c2a3f9;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 0.89em;
+  font-weight: 600;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #232336;
+  font-size: 1em;
+  color: #c2c2cf;
+  padding: 18px 3vw;
+  background: #0a0a0e;
+  margin-top: 48px;
+}
+.site-footer > .footer-inner:first-of-type {
+  gap: 28px;
+  padding-bottom: 12px;
+}
+.footer-left {
+  color: #c2c2cf;
+}
+.footer-right a {
+  color: #bebef2;
+  margin-left: 28px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.14s;
+}
+.footer-right a:hover {
+  color: #910dfc;
+}
+
+/* Ensure footer links never show underlines (including on hover/visited/focus) */
+.site-footer a,
+.site-footer a:link,
+.site-footer a:visited,
+.site-footer a:hover,
+.site-footer a:active,
+.site-footer a:focus {
+  text-decoration: none;
+}
